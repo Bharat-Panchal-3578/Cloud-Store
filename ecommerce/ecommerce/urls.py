@@ -25,7 +25,7 @@ urlpatterns = [
     path('', home_view, name='home'),
 
     #Include app URLs
-    path('users/', include('users.urls')),
+    path('', include('users.urls')),
     path('cart/', include('cart.urls')),
     path('products/', include('products.urls')),
 ]
