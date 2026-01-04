@@ -82,7 +82,13 @@
         <div class="d-flex justify-content-end mt-4">
             <h4>Total: ₹{{ total }}</h4>
         </div>
-
+        
+        <form method="post" action="{% url 'checkout' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-dark btn-lg mt-3">
+                Proceed to Checkout
+            </button>
+        </form>
     {% else %}
         <p class="text-muted">Your cart is empty.</p>
     {% endif %}
