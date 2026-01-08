@@ -222,7 +222,7 @@ LOGGING = {
 
 
 # Security settings (Production)
-if not DEBUG:
+if DEBUG is False:
     # Cookies over HTTPS only
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
@@ -235,5 +235,5 @@ if not DEBUG:
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
 
-# Required when running behind a proxy like Azure App Service
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # Required when running behind a proxy like Azure App Service
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
