@@ -25,7 +25,7 @@ env = environ.Env(
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Read .env file
-environ.Env.read_env(BASE_DIR.parent / '.env')
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
@@ -48,10 +48,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
-    'products.apps.ProductsConfig',
-    'orders.apps.OrdersConfig',
-    'cart.apps.CartConfig',
+    'ecommerce.users.apps.UsersConfig',
+    'ecommerce.products.apps.ProductsConfig',
+    'ecommerce.orders.apps.OrdersConfig',
+    'ecommerce.cart.apps.CartConfig',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ecommerce.urls'
+ROOT_URLCONF = 'ecommerce.ecommerce.urls'
 
 TEMPLATES = [
     {
@@ -76,13 +76,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart_context',
+                'ecommerce.cart.context_processors.cart_context',
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'ecommerce.wsgi.application'
+WSGI_APPLICATION = 'ecommerce.ecommerce.wsgi.application'
 
 
 # Database
@@ -123,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 AUTHENTICATION_BACKENDS = [
-    'users.backends.EmailBackend',
+    'ecommerce.users.backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',  # keep this
 ]
 
