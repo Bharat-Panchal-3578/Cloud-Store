@@ -220,9 +220,10 @@ LOGGING = {
     },
 }
 
+DJANGO_ENV = env('DJANGO_ENV', default='production')
 
 # Security settings (Production)
-if DEBUG is False:
+if DJANGO_ENV == 'production':
     # Cookies over HTTPS only
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
