@@ -100,9 +100,7 @@ DATABASES = {
         'PORT': env('DB_PORT'),
         'OPTIONS': {
             'charset': 'utf8mb4',
-            'ssl': {
-                'ssl_mode': 'REQUIRED',
-            }
+            'ssl_mode': 'REQUIRED',
         },
     }
 }
