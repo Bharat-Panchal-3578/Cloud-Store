@@ -101,7 +101,7 @@ DATABASES = {
         'OPTIONS': {
             'charset': 'utf8mb4',
             'ssl': {
-                'ssl-mode': 'REQUIRED',
+                'ssl_mode': 'REQUIRED',
             }
         },
     }
