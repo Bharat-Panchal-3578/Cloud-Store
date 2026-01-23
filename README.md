@@ -1,11 +1,12 @@
 # 🛒 Cloud-Store
 
-**Cloud-Store** is a single-vendor e-commerce web application built with **Django** and **MySQL**, designed with production-grade backend architecture, security best practices, and test-driven development.
+**Cloud-Store** is a single-vendor e-commerce web application built with **Django** and **MySQL**, designed with a strong focus on backend architecture, real-world deployment, and production readiness.
 
-This project represents a complete **Minimum Viable Product (MVP)** and serves as a real-world Django deployment case study.
+This project represents a fully functional **Minimum Viable Product (MVP)** that has been **successfully deployed and tested end-to-end.**
 
 ---
 
+## 📁 Project Structure
 ```
 E-Commerce/
 ├── README.md
@@ -89,7 +90,8 @@ E-Commerce/
 - **Frontend:** Django Templates  
 - **Testing:** Pytest + pytest-django  
 - **Configuration:** Environment-based settings using `django-environ`  
-- **Deployment Target:** Azure App Service  
+- **Deployment:** Azure App Service (Linux)
+- **CI/CD:** GitHub Actions
 
 ---
 
@@ -117,12 +119,15 @@ python manage.py runserver
 ## ✅ Core Features (MVP)
 
 - Product listing & detail pages  
-- Session-based cart system  
+- Session-based shopping cart     
 - User authentication (login, logout, signup)  
 - Order placement & order history  
-- Admin management for products and orders  
+- Admin panel for managing products and orders  
+- Environment based configuration
 - Media handling for product images  
-- Production-ready security configuration  
+- Production-ready security configuration
+
+> Note: Product images and external media storage are intentionally skipped in this MVP to keep the focus on backend stability and deployment.
 
 ---
 
@@ -133,12 +138,13 @@ python manage.py runserver
 - HTTPS enforcement (production)
 - HSTS configuration
 - Proxy-aware SSL handling (Azure compatible)
+- `python manage.py check --deploy` verified
 
 ---
 
 ## 🧪 Testing & Quality
 
-- Comprehensive unit and integration tests
+- Unit and integration tests across apps
 - Service-layer testing for cart and order logic
 - View-level testing with authentication coverage
 - All tests passing (`pytest -v`)
@@ -150,7 +156,18 @@ python manage.py runserver
 ## 📌 Project Status
 
 ### 🟢 MVP Complete
-### 🚀 Deployment in Progress
+
+## 🔗 Live Demo
+
+The application is deployed on **Azure App Service** and is publicly accessible.
+
+**Live URL:**  
+👉 https://cloud-store-f5atfnabbpeyh9c9.centralindia-01.azurewebsites.net
+
+> ℹ️ **Note:**
+> - This is an MVP deployment.
+> - Product images and media storage are intentionally skipped for now.
+> - The app focuses on backend architecture, workflows, and deployment correctness.
 
 ### Planned future enhancements:
 
@@ -162,13 +179,6 @@ python manage.py runserver
 
 ---
 
-## 📌 Notes
-
-- This project is being developed incrementally with a strong focus on backend design.
-- APIs, JWT authentication, and production deployment will be added in later phases.
-
----
-
 ## 📄 License
 
-No license has been applied yet. This project is under active development.
+No license has been applied yet. This project is under active development and learning-focused iteration.
